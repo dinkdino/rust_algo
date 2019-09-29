@@ -1,7 +1,7 @@
 
 pub fn binary_search<T: Ord>(list: &[T], key: T) -> Option<usize> {
     let mut low = 0;
-    let mut high = list.len();
+    let mut high = list.len() - 1;
 
     while low <= high {
         let mid = (low + high) / 2;
@@ -30,3 +30,21 @@ pub fn binary_search_rec<T: Ord>(list: &[T], key: T, low: usize, high: usize) ->
     }
 }
 
+
+#[cfg(test)]
+mod test {
+
+    use super::*;
+
+    #[test]
+    fn find_element_exists() {
+        let arr = [1,2,3,4,5,6,7,8,9];
+        assert_eq!(binary_search(&arr, 3), Some(2));
+    }
+
+    #[test]
+    fn find_element_does_not_exist() {
+        let arr = [1,2,3,4,5,6,7,8,9];
+        assert_eq!(binary_search(&arr, 12), None);
+    }
+}
