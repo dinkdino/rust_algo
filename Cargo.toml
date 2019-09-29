@@ -1,5 +1,5 @@
 [package]
-name = "RustAlgo"
+name = "rust_algo"
 version = "0.1.0"
 authors = ["Hrishikesh Sawant <hrishikesh.sawant1@tcs.com>"]
 edition = "2018"
