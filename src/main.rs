@@ -1,4 +1,7 @@
 mod binary_search;
+mod heap;
+
+use heap::*;
 
 fn main() {
 
@@ -13,4 +16,8 @@ fn main() {
         None => println!("Could not find element"),
         Some(index) => println!("Element found at {}", index)
     }
+
+    //let queue: Heap<i32> = Heap::new(HeapOrder::Max);
+
+
 }
